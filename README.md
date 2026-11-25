@@ -10,7 +10,7 @@ Current Projects - www.bipnov.com  &  www.iqskool.com
 
 ==============================================================================
 # Under-development 
-==============================================================================
+
 # 1. Todo
 1. codeforce Scraper
 2. fin-bot (stock, fx, bch )
