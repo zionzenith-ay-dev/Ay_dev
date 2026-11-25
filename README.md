@@ -1,5 +1,5 @@
 
-# A. Quick Profile  ==================================== 
+# A. My Quick Profile  ==================================== 
 # 1. Ay-Dev Core Projects ----- Corporate Brands (Active)
 * Current Project - - - www.bipnov.com  
 * Current Project  - - - www.iqskool.com
