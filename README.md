@@ -1,6 +1,6 @@
 # A. Ay-Dev Core Prokjects 
-Current Projects - www.bipnov.com  &  www.iqskool.com
-Proposed - - - Vz, 
+* Current Projects - www.bipnov.com  &  www.iqskool.com
+* Proposed - - - Vz, 
 
 
 # B. Completed Projects 
