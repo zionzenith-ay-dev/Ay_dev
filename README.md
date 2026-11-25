@@ -1,8 +1,8 @@
 
 # A. Quick Profile  ==================================== 
 # 1. Ay-Dev Core Projects ----- Corporate Brands 
-    * Current Projects - www.bipnov.com  &  www.iqskool.com
-    * Proposed - - - Vz, 
+* Current Projects - www.bipnov.com  &  www.iqskool.com
+* Proposed - - - Vz, 
 
 # 2. Completed Projects ---------- Client Projects 
     1. school result
