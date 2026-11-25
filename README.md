@@ -1,18 +1,18 @@
 
-# A. Quick Profile  ==================================================
+# A. Quick Profile  ==================================== 
 # 1. Ay-Dev Core Prokjects 
     * Current Projects - www.bipnov.com  &  www.iqskool.com
     * Proposed - - - Vz, 
 
-# 2. Completed Projects 
+# 2. Completed Projects ---------- Client Projects 
     1. school result
     2. cake mgt
     3. MFB
     4. Church
 
 
-# B Under-development  ===============================================
-    # 3. Todo
+# B Under-development  ================================= 
+# 3. Todo (Projects) ------------- Portfolio
     1. codeforce Scraper
     2. fin-bot (stock, fx, bch )
     3. comm-bot (wp. tg, ln, wechat, ) - - -  support, customer care,
