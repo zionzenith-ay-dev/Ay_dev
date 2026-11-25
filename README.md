@@ -1,6 +1,6 @@
 
 # A. Quick Profile  ==================================== 
-# 1. Ay-Dev Core Prokjects 
+# 1. Ay-Dev Core Projects 
     * Current Projects - www.bipnov.com  &  www.iqskool.com
     * Proposed - - - Vz, 
 
