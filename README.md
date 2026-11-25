@@ -12,14 +12,14 @@
 
 
 # B Under-development  ================================= 
-# 3. Todo (Projects) ------------- Portfolio
+# 3. Todo (Proficiency Projects) -------- Portfolio
     1. codeforce Scraper
     2. fin-bot (stock, fx, bch )
     3. comm-bot (wp. tg, ln, wechat, ) - - -  support, customer care,
     4. BI
     5. GIS 
     
-# 4. Multi-tenancy 
+# 4. Multi-tenancy  ------------------ Portfolio
     1. NGO
     2. Coop
     3. School - - - DIY, Clubs,
