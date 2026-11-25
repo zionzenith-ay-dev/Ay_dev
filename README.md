@@ -1,8 +1,8 @@
-# Ay1
+# A. Ay-Dev Core Prokjects 
 Current Projects - www.bipnov.com  &  www.iqskool.com
 
 
-# Completed 
+# B. Completed Projects 
 1. school result
 2. cake mgt
 3. MFB
