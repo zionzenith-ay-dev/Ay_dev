@@ -1,5 +1,6 @@
 # A. Ay-Dev Core Prokjects 
 Current Projects - www.bipnov.com  &  www.iqskool.com
+Proposed - - - Vz, 
 
 
 # B. Completed Projects 
@@ -23,4 +24,5 @@ Current Projects - www.bipnov.com  &  www.iqskool.com
 # 2. Multi-tenancy 
 1. NGO
 2. Coop
-3. 
+3. School - - - DIY, Clubs,
+4. eCampus - - - Research + ... ( Biophnix Lab ) > Applied Bio, Chem, Phy, Computer & Agro 
