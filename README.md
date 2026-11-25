@@ -1,4 +1,26 @@
 # Ay1
+Current Projects - www.bipnov.com  &  www.iqskool.com
 
 
-https://drive.google.com/file/d/14iKMWn8bzkd_TMWNkW4LT_9m68J6NDyt/view?usp=drivesdk
+# Completed 
+1. school result
+2. cake mgt
+3. MFB
+4. Church
+
+==============================================================================
+# Under-development 
+==============================================================================
+# 1. Todo
+1. codeforce Scraper
+2. fin-bot (stock, fx, bch )
+3. comm-bot (wp. tg, ln, wechat, ) - - -  support, customer care,
+4. BI
+5. GIS
+6. 
+
+
+# 2. Multi-tenancy 
+1. NGO
+2. Coop
+3. 
