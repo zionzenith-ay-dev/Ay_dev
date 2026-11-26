@@ -25,3 +25,21 @@
     2. Coop
     3. School - - - DIY, Clubs,
     4. eCampus - - - Research + ... ( Biophnix Lab ) > Applied Bio, Chem, Phy, Computer & Agro 
+
+
+
+# IQskool - 
+    scratch    -  Picoblox     - Explainer
+    Python     -  PyGame       - Roblox
+    mApp
+    web scripting - Cloud - Web3
+    Graphics
+    No Code 
+    
+    Digital Marketing   -  Content Writing 
+    DA - BI - ML - Data Sci
+    SysAdm - HW Engr - Robotocs & IoT
+    Networking - CySy
+    Informatics - GIS, BIO, Fin, Med
+
+
