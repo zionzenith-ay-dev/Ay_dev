@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive SaaS Learning Platform - Course Catalog</title>
+    <style>
+        :root {
+            --tech-color: #4f46e5;
+            --tech-bg: #eef2ff;
+            --mgt-color: #059669;
+            --mgt-bg: #ecfdf5;
+            --soc-color: #d97706;
+            --soc-bg: #fffbeb;
+            --art-color: #e11d48;
+            --art-bg: #fff1f2;
+            --stem-color: #7c3aed;
+            --stem-bg: #f5f3ff;
+            
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-body: #f9fafb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .domain-section {
+            margin-bottom: 70px;
+        }
+
+        .domain-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--border);
+        }
+
+        .domain-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .domain-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .domain-header p {
+            margin: 4px 0 0 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Domain Specific Colors */
+        .tech .domain-header { border-bottom-color: var(--tech-color); }
+        .tech .domain-icon { background: var(--tech-bg); }
+        .tech .tag { background: var(--tech-bg); color: var(--tech-color); }
+
+        .mgt .domain-header { border-bottom-color: var(--mgt-color); }
+        .mgt .domain-icon { background: var(--mgt-bg); }
+        .mgt .tag { background: var(--mgt-bg); color: var(--mgt-color); }
+
+        .soc .domain-header { border-bottom-color: var(--soc-color); }
+        .soc .domain-icon { background: var(--soc-bg); }
+        .soc .tag { background: var(--soc-bg); color: var(--soc-color); }
+
+        .art .domain-header { border-bottom-color: var(--art-color); }
+        .art .domain-icon { background: var(--art-bg); }
+        .art .tag { background: var(--art-bg); color: var(--art-color); }
+
+        .stem .domain-header { border-bottom-color: var(--stem-color); }
+        .stem .domain-icon { background: var(--stem-bg); }
+        .stem .tag { background: var(--stem-bg); color: var(--stem-color); }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .course-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+
+        .course-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .duration {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Enterprise Learning Catalog</h1>
+        <p>A fully integrated, 60+ course curriculum spanning Technology, Management, Social Sciences, Arts, and STEM. Designed to upskill teams across the entire modern digital value chain.</p>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- TECHNOLOGY DOMAIN -->
+    <!-- ========================================== -->
+    <section class="domain-section tech">
+        <div class="domain-header">
+            <span class="domain-icon">💻</span>
+            <div>
+                <h2>Technology Domain</h2>
+                <p>Core engineering, development, data, and infrastructure tracks.</p>
+            </div>
+        </div>
+        <div class="courses-grid">
+            <article class="course-card">
+                <h3 class="course-title">Visual Programming & Educational Animation</h3>
+                <p class="course-desc">Master block-based coding (Scratch) and visual storytelling tools (Pictobox) to create engaging educational content and interactive explainers.</p>
+                <div class="course-meta"><span class="tag">EdTech</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Mobile App Development (mApp)</h3>
+                <p class="course-desc">Build native and cross-platform mobile applications. Cover iOS (Swift), Android (Kotlin), and frameworks like React Native or Flutter.</p>
+                <div class="course-meta"><span class="tag">Development</span><span class="duration">10 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Web Design, UI/UX & Full-Stack Scripting</h3>
+                <p class="course-desc">From WordPress CMS to custom web scripting. Master frontend frameworks, backend logic, and user-centric interface design.</p>
+                <div class="course-meta"><span class="tag">Web Dev</span><span class="duration">12 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Cloud Engineering & Web3 Architecture</h3>
+                <p class="course-desc">Deploy scalable cloud infrastructure (AWS/Azure) and build decentralized applications (dApps) using blockchain and smart contracts.</p>
+                <div class="course-meta"><span class="tag">Cloud/Blockchain</span><span class="duration">9 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Computer-Aided Design (CAD) & 3D Graphics</h3>
+                <p class="course-desc">Professional 2D drafting and 3D parametric modeling for engineering, architecture, and product design using industry-standard CAD tools.</p>
+                <div class="course-meta"><span class="tag">Graphics/CAD</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Digital Media Production & Broadcasting</h3>
+                <p class="course-desc">End-to-end media workflows. Master multi-camera shooting, live broadcasting, video editing, and digital asset management.</p>
+                <div class="course-meta"><span class="tag">Media</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Data Analytics & Business Intelligence (BI)</h3>
+                <p class="course-desc">Transform raw data into strategic insights. Master SQL, Tableau/PowerBI, and advanced analytical modeling for business decision-making.</p>
+                <div class="course-meta"><span class="tag">Data/BI</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Digital Marketing, No-Code & Automation</h3>
+                <p class="course-desc">Build marketing funnels and automate workflows using no-code/low-code platforms (Zapier, Make) and modern MarTech stacks.</p>
+                <div class="course-meta"><span class="tag">Marketing Tech</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Data Engineering & Big Data Pipelines</h3>
+                <p class="course-desc">Architect robust ETL/ELT pipelines. Master Hadoop, Spark, Kafka, and data warehousing solutions for massive scale data processing.</p>
+                <div class="course-meta"><span class="tag">Big Data</span><span class="duration">9 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Machine Learning & Data Science</h3>
+                <p class="course-desc">Build predictive models and AI algorithms. Cover supervised/unsupervised learning, neural networks, and NLP using Python and TensorFlow.</p>
+                <div class="course-meta"><span class="tag">AI/ML</span><span class="duration">10 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Game Development & Physics Simulations</h3>
+                <p class="course-desc">Create interactive simulations and games. Master game engines (Unity/Unreal), physics modeling, and real-time rendering techniques.</p>
+                <div class="course-meta"><span class="tag">Game Dev</span><span class="duration">10 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">System Administration & Cybersecurity</h3>
+                <p class="course-desc">Secure enterprise networks and manage IT infrastructure. Cover ethical hacking, threat modeling, SIEM, and zero-trust architecture.</p>
+                <div class="course-meta"><span class="tag">CyberSec</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Systems Engineering, Electronics, Robotics & IoT</h3>
+                <p class="course-desc">Bridge hardware and software. Design embedded systems, program microcontrollers, and build connected IoT and robotic solutions.</p>
+                <div class="course-meta"><span class="tag">IoT/Robotics</span><span class="duration">9 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Geographic Information Systems (GIS) & Bioinformatics</h3>
+                <p class="course-desc">Analyze spatial data and biological datasets. Master ArcGIS/QGIS for mapping and computational tools for genomic and proteomic analysis.</p>
+                <div class="course-meta"><span class="tag">GIS/Bio</span><span class="duration">8 Weeks</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- MANAGEMENT DOMAIN -->
+    <!-- ========================================== -->
+    <section class="domain-section mgt">
+        <div class="domain-header">
+            <span class="domain-icon">💼</span>
+            <div>
+                <h2>Management Domain</h2>
+                <p>Leadership, operations, strategy, and organizational excellence.</p>
+            </div>
+        </div>
+        <div class="courses-grid">
+            <article class="course-card">
+                <h3 class="course-title">Agile & Traditional Project Management</h3>
+                <p class="course-desc">Master PMP, PRINCE2, Scrum, and Kanban. Learn to scope, schedule, and deliver complex projects on time and within budget.</p>
+                <div class="course-meta"><span class="tag">Project Mgt</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Product Engineering & Lifecycle Management</h3>
+                <p class="course-desc">Bridge the gap between engineering and business. Master product vision, roadmap planning, and iterative development cycles.</p>
+                <div class="course-meta"><span class="tag">Product</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">HRM, QA, Welfare, Training & HSE</h3>
+                <p class="course-desc">Manage the complete employee lifecycle and workplace safety. Cover talent acquisition, ISO quality assurance, and Health, Safety & Environment (HSE) compliance.</p>
+                <div class="course-meta"><span class="tag">HR & Safety</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Customer Relationship Management (CRM)</h3>
+                <p class="course-desc">Design and optimize customer journeys. Master CRM platforms (Salesforce, HubSpot), client retention strategies, and customer success metrics.</p>
+                <div class="course-meta"><span class="tag">CRM</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Resource, Inventory & Information Management</h3>
+                <p class="course-desc">Optimize physical and digital assets. Master supply chain inventory, resource allocation, and enterprise data/information governance.</p>
+                <div class="course-meta"><span class="tag">Operations</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Strategic Marketing, Promotions & Branding</h3>
+                <p class="course-desc">Build unforgettable brands. Master market positioning, campaign promotion, brand equity management, and go-to-market strategies.</p>
+                <div class="course-meta"><span class="tag">Marketing</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Operations, Technology & Engineering Management</h3>
+                <p class="course-desc">Lead technical teams effectively. Bridge the gap between C-suite goals and engineering execution, managing R&D and technical operations.</p>
+                <div class="course-meta"><span class="tag">Tech Mgt</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Sales Strategy, Logistics & Distribution</h3>
+                <p class="course-desc">Drive revenue and move products. Master B2B/B2C sales methodologies, global logistics networks, and last-mile distribution optimization.</p>
+                <div class="course-meta"><span class="tag">Sales/Logistics</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Executive Leadership, Strategy & Public Policy</h3>
+                <p class="course-desc">C-suite essentials. Master corporate governance, macro-strategy formulation, organizational administration, and regulatory policy navigation.</p>
+                <div class="course-meta"><span class="tag">Leadership</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Corporate Systems, Risk, Change & Sustainability</h3>
+                <p class="course-desc">Navigate complex transformations. Learn enterprise risk management (ERM), change leadership, and ESG (Environmental, Social, Governance) frameworks.</p>
+                <div class="course-meta"><span class="tag">Risk/ESG</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Market Research, Auditing & Competitive Intel</h3>
+                <p class="course-desc">Outsmart the competition. Master primary/secondary research, financial/operational auditing, and strategic competitive intelligence gathering.</p>
+                <div class="course-meta"><span class="tag">Research</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Corporate Finance, Accounting & FinOps</h3>
+                <p class="course-desc">Master the language of business. Cover corporate accounting, financial modeling, capital allocation, and cloud/tech FinOps.</p>
+                <div class="course-meta"><span class="tag">Finance</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Program Management & Corporate Event Production</h3>
+                <p class="course-desc">Manage portfolios of projects and large-scale events. Master corporate retreat planning, domain-specific conferences, and program-level governance.</p>
+                <div class="course-meta"><span class="tag">Programs</span><span class="duration">5 Weeks</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SOCIAL SCIENCES DOMAIN -->
+    <!-- ========================================== -->
+    <section class="domain-section soc">
+        <div class="domain-header">
+            <span class="domain-icon">🌍</span>
+            <div>
+                <h2>Social Sciences Domain</h2>
+                <p>Human behavior, digital societies, ethics, and research methodologies.</p>
+            </div>
+        </div>
+        <div class="courses-grid">
+            <article class="course-card">
+                <h3 class="course-title">Behavioral Economics & Decision Science</h3>
+                <p class="course-desc">Understand the psychological drivers of economic choices. Apply nudges, bias mitigation, and behavioral models to product and policy design.</p>
+                <div class="course-meta"><span class="tag">Psychology</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Digital Sociology & Virtual Communities</h3>
+                <p class="course-desc">Analyze how human societies form, interact, and evolve within digital ecosystems, social media, and the metaverse.</p>
+                <div class="course-meta"><span class="tag">Sociology</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Cognitive Psychology & Human-Computer Interaction</h3>
+                <p class="course-desc">Bridge mind and machine. Study mental models, cognitive load, and perception to design highly intuitive tech interfaces.</p>
+                <div class="course-meta"><span class="tag">HCI</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">AI Ethics, Algorithmic Bias & Tech Policy</h3>
+                <p class="course-desc">Navigate the moral and legal landscapes of AI. Study algorithmic fairness, data privacy laws, and the formulation of global tech governance.</p>
+                <div class="course-meta"><span class="tag">Ethics/Law</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Spatial Sociology & Health Geography</h3>
+                <p class="course-desc">Complementing GIS. Explore how physical environments, urban planning, and spatial data impact public health and social equity.</p>
+                <div class="course-meta"><span class="tag">Geography</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Advanced Quantitative & Qualitative Research</h3>
+                <p class="course-desc">Master mixed-methods research. Design rigorous surveys, conduct ethnographic interviews, and apply statistical significance testing.</p>
+                <div class="course-meta"><span class="tag">Research</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Organizational Psychology & Team Dynamics</h3>
+                <p class="course-desc">Optimize human capital. Study motivation, leadership psychology, conflict resolution, and the science of high-performing teams.</p>
+                <div class="course-meta"><span class="tag">Org Psych</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Digital Media Studies & Information Culture</h3>
+                <p class="course-desc">Critically analyze the creation, distribution, and consumption of media. Study misinformation, digital culture, and media literacy.</p>
+                <div class="course-meta"><span class="tag">Media Studies</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Cybercriminology & Digital Forensics Sociology</h3>
+                <p class="course-desc">Complementing CyberSec. Study the sociological and psychological profiles of cybercriminals, hacktivism, and the social impact of cybercrime.</p>
+                <div class="course-meta"><span class="tag">Criminology</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Demography, Census Analytics & Population Trends</h3>
+                <p class="course-desc">Analyze population dynamics. Master demographic modeling, migration patterns, and census data analysis for market and policy forecasting.</p>
+                <div class="course-meta"><span class="tag">Demography</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Political Economy & Global Tech Governance</h3>
+                <p class="course-desc">Understand the intersection of politics, economics, and technology. Study antitrust laws, digital sovereignty, and international tech trade.</p>
+                <div class="course-meta"><span class="tag">PolSci</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Computational Linguistics & Semantics</h3>
+                <p class="course-desc">The human foundation for NLP. Study syntax, semantics, and language acquisition to better understand and train large language models.</p>
+                <div class="course-meta"><span class="tag">Linguistics</span><span class="duration">5 Weeks</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- ARTS DOMAIN -->
+    <!-- ========================================== -->
+    <section class="domain-section art">
+        <div class="domain-header">
+            <span class="domain-icon">🎨</span>
+            <div>
+                <h2>Arts Domain</h2>
+                <p>Visual communication, digital creation, audio, and immersive design.</p>
+            </div>
+        </div>
+        <div class="courses-grid">
+            <article class="course-card">
+                <h3 class="course-title">Advanced UI/UX & Design Systems Architecture</h3>
+                <p class="course-desc">Scale design across products. Master design tokens, component libraries, accessibility (a11y), and advanced prototyping in Figma.</p>
+                <div class="course-meta"><span class="tag">Digital Design</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Industrial Design, CAD & Parametric Modeling</h3>
+                <p class="course-desc">Elevate your CAD skills. Focus on aesthetic ergonomics, physical prototyping, and parametric design for manufacturing and product art.</p>
+                <div class="course-meta"><span class="tag">Industrial Art</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Game Art, Environment Concept & Narrative Design</h3>
+                <p class="course-desc">Craft immersive worlds. Master environment concept art, character design, lore building, and visual storytelling for simulations.</p>
+                <div class="course-meta"><span class="tag">Game Art</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Cinematic Media Production & Post-Production</h3>
+                <p class="course-desc">Professional film workflows. Master color grading, VFX compositing, advanced editing, and cinematic lighting for digital media.</p>
+                <div class="course-meta"><span class="tag">Film/Media</span><span class="duration">9 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Visual Data Storytelling & Dynamic Infographics</h3>
+                <p class="course-desc">Turn BI data into art. Master D3.js, Tableau design, and motion graphics to create compelling, easy-to-digest data narratives.</p>
+                <div class="course-meta"><span class="tag">Data Viz</span><span class="duration">4 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Sound Design, Foley & Spatial Audio Engineering</h3>
+                <p class="course-desc">Design the soundscape. Master audio synthesis, Foley art, mixing, and 3D spatial audio for games, VR, and media production.</p>
+                <div class="course-meta"><span class="tag">Audio Art</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Motion Graphics, 2D Animation & Explainer Videos</h3>
+                <p class="course-desc">Bring ideas to life. Master After Effects, character rigging, and kinetic typography to create high-converting explainer animations.</p>
+                <div class="course-meta"><span class="tag">Animation</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Typography, Layout & Visual Communication</h3>
+                <p class="course-desc">The foundation of graphic design. Master type pairing, grid systems, visual hierarchy, and print/digital layout principles.</p>
+                <div class="course-meta"><span class="tag">Graphic Design</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Digital Photography, Lighting & Color Grading</h3>
+                <p class="course-desc">Master the camera and the light. Study composition, studio lighting setups, and advanced color theory for digital and commercial photography.</p>
+                <div class="course-meta"><span class="tag">Photography</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Scriptwriting & Narrative Design for Interactive Media</h3>
+                <p class="course-desc">Write for non-linear mediums. Master branching dialogue, interactive storytelling, and script formatting for games and immersive experiences.</p>
+                <div class="course-meta"><span class="tag">Writing</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Brand Identity, Art Direction & Visual Strategy</h3>
+                <p class="course-desc">Lead creative teams. Master the development of comprehensive brand guidelines, art direction, and cohesive visual marketing strategies.</p>
+                <div class="course-meta"><span class="tag">Art Direction</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Immersive Experience Design (VR/AR/MR)</h3>
+                <p class="course-desc">Design for spatial computing. Master 3D UI/UX, presence theory, and interaction design for Virtual, Augmented, and Mixed Reality.</p>
+                <div class="course-meta"><span class="tag">XR Design</span><span class="duration">7 Weeks</span></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- STEM DOMAIN -->
+    <!-- ========================================== -->
+    <section class="domain-section stem">
+        <div class="domain-header">
+            <span class="domain-icon">🔬</span>
+            <div>
+                <h2>STEM Domain</h2>
+                <p>Hard sciences, advanced mathematics, and foundational engineering.</p>
+            </div>
+        </div>
+        <div class="courses-grid">
+            <article class="course-card">
+                <h3 class="course-title">Applied Mathematics for Machine Learning & AI</h3>
+                <p class="course-desc">The math behind the models. Deep dive into linear algebra, multivariate calculus, and optimization for neural networks.</p>
+                <div class="course-meta"><span class="tag">Mathematics</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Engineering Mechanics, Kinematics & Physics Simulations</h3>
+                <p class="course-desc">Ground your CAD and Game Dev in reality. Master classical mechanics, rigid body dynamics, and physics engine mathematics.</p>
+                <div class="course-meta"><span class="tag">Physics</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Control Systems, Microcontrollers & Embedded Electronics</h3>
+                <p class="course-desc">The core of IoT and Robotics. Study PID controllers, sensor fusion, PCB design, and real-time embedded C/C++ programming.</p>
+                <div class="course-meta"><span class="tag">Electronics</span><span class="duration">8 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Spatial Data Science, Remote Sensing & GIS Analytics</h3>
+                <p class="course-desc">Advanced geospatial math. Master coordinate transformations, spatial statistics, LiDAR processing, and satellite imagery analysis.</p>
+                <div class="course-meta"><span class="tag">Earth Science</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Computational Biology, Genomics & Proteomics</h3>
+                <p class="course-desc">Decode life with code. Study sequence alignment algorithms, molecular modeling, and the application of ML to biological datasets.</p>
+                <div class="course-meta"><span class="tag">Biology</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Advanced Statistics, Probability & Bayesian Inference</h3>
+                <p class="course-desc">Master uncertainty. Cover hypothesis testing, Markov chains, Bayesian networks, and time-series forecasting for Big Data.</p>
+                <div class="course-meta"><span class="tag">Statistics</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Discrete Mathematics, Cryptography & Graph Theory</h3>
+                <p class="course-desc">The foundation of Dev and Web3. Master boolean logic, number theory, elliptic curve cryptography, and network graph algorithms.</p>
+                <div class="course-meta"><span class="tag">Discrete Math</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Materials Science, Metallurgy & Additive Manufacturing</h3>
+                <p class="course-desc">Crucial for CAD and Engineering. Study material properties, stress/strain analysis, and the science of 3D printing/sintering.</p>
+                <div class="course-meta"><span class="tag">Materials</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Environmental Science, Ecology & Sustainability Eng.</h3>
+                <p class="course-desc">Support ESG and Green Tech. Study carbon cycle modeling, renewable energy thermodynamics, and environmental impact assessments.</p>
+                <div class="course-meta"><span class="tag">Env Science</span><span class="duration">5 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Fluid Dynamics, Thermodynamics & Heat Transfer</h3>
+                <p class="course-desc">Essential for mechanical and systems engineering. Master Navier-Stokes equations, HVAC modeling, and thermal management in electronics.</p>
+                <div class="course-meta"><span class="tag">Thermodynamics</span><span class="duration">7 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Neurobiology, Cognitive Science & Brain-Computer Interfaces</h3>
+                <p class="course-desc">The frontier of SysEngr and AI. Study neural pathways, synaptic plasticity, and the engineering of non-invasive BCI hardware.</p>
+                <div class="course-meta"><span class="tag">Neuroscience</span><span class="duration">6 Weeks</span></div>
+            </article>
+            <article class="course-card">
+                <h3 class="course-title">Operations Research, Linear Programming & Optimization</h3>
+                <p class="course-desc">Optimize complex systems. Master the simplex method, queuing theory, and algorithmic optimization for logistics and data engineering.</p>
+                <div class="course-meta"><span class="tag">Optimization</span><span class="duration">5 Weeks</span></div>
+            </article>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
