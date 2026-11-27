@@ -54,11 +54,13 @@
 22. Ops, tech & Engr. Mgt
 23. Sales, Logistics & Distrubution 
 24. Leardership, strategy, policy & Admin
-25. Corporate System Mgt + rist, change, sustainability, 
+25. Corporate System Mgt + rist, change, sustainability, cross-functional Collab.
 26. Research, audit, competition and BI
 27. Fin and accounting
 28. Programs & events (corporate, Doamin specific ... )
-29. ...  
+29.Innovation, growth, aquisition and diversification
+30. Procurement
+31. ...  
 
 
 # IQskool - 
