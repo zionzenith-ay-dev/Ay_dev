@@ -50,17 +50,16 @@
 
 
 # IQskool - 
-    scratch    -  Picoblox     - Explainer
-    Python     -  PyGame       - Roblox
-    mApp
-    web scripting - Cloud - Web3
-    Graphics
-    No Code 
-    
-    Digital Marketing   -  Content Writing 
-    DA - BI - ML - Data Sci
-    SysAdm - HW Engr - Robotocs & IoT
-    Networking - CySy
-    Informatics - GIS, BIO, Fin, Med
+1. scratch    -  Picoblox     - Explainer
+2. Python     -  PyGame       - Roblox
+3. mApp
+4. web scripting - Cloud - Web3
+5 Graphics
+6. No Code 
+7. Digital Marketing   -  Content Writing 
+8. DA - BI - ML - Data Sci
+9. SysAdm - HW Engr - Robotocs & IoT
+10. Networking - CySy
+11. Informatics - GIS, BIO, Fin, Med
 
 
