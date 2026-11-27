@@ -44,9 +44,8 @@
 12. Syst Admin            - CyberSec
 13. SysEngr               - tronics, robotics & IoT
 14. GIS                   - Bioinfo
-
 15. Project mgt
-16. 
+16. ...
 
 
 # IQskool - 
@@ -61,5 +60,6 @@
 9. SysAdm - HW Engr - Robotocs & IoT
 10. Networking - CySy
 11. Informatics - GIS, BIO, Fin, Med
+12. ....
 
 
