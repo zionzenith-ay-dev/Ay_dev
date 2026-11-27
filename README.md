@@ -44,8 +44,21 @@
 12. Syst Admin            - CyberSec
 13. SysEngr               - tronics, robotics & IoT
 14. GIS                   - Bioinfo
-15. Project mgt
-16. ...
+    ----
+16. Project mgt
+17. Product Engr. & mgt
+18. HRM, QA, welfare, Training & HSE healt safety & Env. 
+19. CRM
+20. Resource, Inventory, Data, Information & Communication
+21. Marketing - Promotion & Branding 
+22. Ops, tech & Engr. Mgt
+23. Sales, Logistics & Distrubution 
+24. Leardership, strategy, policy & Admin
+25. Corporate System Mgt + rist, change, sustainability, 
+26. Research, audit, competition and BI
+27. Fin and accounting
+28. Programs & events (corporate, Doamin specific ... )
+29. ...
 
 
 # IQskool - 
