@@ -29,7 +29,7 @@
 
 
 
-# Bipnove 
+# Bipnov 
 1. Scratch/Explainer     - Pictobox
 2. Dev                   - mApp
 3. web design (UIUX/wp)  - web scripting 
@@ -60,7 +60,7 @@
 28. Programs & events (corporate, Doamin specific ... )
 29.Innovation, growth, aquisition and diversification
 30. Procurement
-31. ...  
+31. Partnership, network, affiliations ...  
 
 
 # IQskool - 
