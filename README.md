@@ -58,7 +58,7 @@
 26. Research, audit, competition and BI
 27. Fin and accounting
 28. Programs & events (corporate, Doamin specific ... )
-29. ...
+29. ...  
 
 
 # IQskool - 
