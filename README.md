@@ -28,6 +28,27 @@
 
 
 
+
+# Bipnove 
+1. Scratch/Explainer     - Pictobox
+2. Dev                   - mApp
+3. web design (UIUX/wp)  - web scripting 
+4. Cloud Engr             - web3 
+5. Graphics              -  CAD
+6. Media Prod.           - 
+7. Data Analysis         -  BI
+8. Digital Marketing     -  no code & Automation
+9. Data Engr             -  Big Data 
+10. ML/Data Sci          -
+11. Simulations          -  Gane dev
+12. Syst Admin            - CyberSec
+13. SysEngr               - tronics, robotics & IoT
+14. GIS                   - Bioinfo
+
+15. Project mgt
+16. 
+
+
 # IQskool - 
     scratch    -  Picoblox     - Explainer
     Python     -  PyGame       - Roblox
