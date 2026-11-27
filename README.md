@@ -43,9 +43,9 @@
 11. Simulations          -  Gane dev
 12. Syst Admin            - CyberSec
 13. SysEngr               - tronics, robotics & IoT
-14. GIS                   -Bioinformatics 
+14. GIS                   -Bioinformatics
+15. 
 
-mgt ------------------------------------------------------
 16. Project mgt
 17. Product Engr. & mgt
 18. HRM, QA, welfare, Training & HSE healt safety & Env. 
