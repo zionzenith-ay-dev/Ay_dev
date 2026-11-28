@@ -3,7 +3,7 @@
 # 1. Ay-Dev Core Projects ----- Corporate Brands (Active)
 * Current Project - - - www.bipnov.com  
 * Current Project  - - - www.iqskool.com
-* Proposed - - - Vz, 
+* Proposed - - - Vz, ebook desiner, 
 
 # 2. Completed Projects ---------- Client Projects 
     1. school result
